@@ -1,0 +1,49 @@
+{
+  "name": "hma-website",
+  "version": "0.1.0",
+  "main": "index.js",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "npm": "please-use-yarn",
+    "yarn": ">= 1.19.1",
+    "node": ">=10.13"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@types/aos": "^3.0.4",
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.32",
+    "@types/react-dom": "18.0.11",
+    "@types/react-hammerjs": "^1.0.4",
+    "@types/react-helmet": "^6.1.6",
+    "@types/react-scroll": "^1.8.6",
+    "@types/react-svg": "^5.0.0",
+    "@types/styled-components": "^5.1.26",
+    "aos": "^2.3.4",
+    "eslint": "8.37.0",
+    "eslint-config-next": "13.2.4",
+    "next": "13.2.4",
+    "next-secure-headers": "^2.2.0",
+    "next-seo": "^6.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hammerjs": "^1.0.1",
+    "react-helmet": "^6.1.0",
+    "react-scroll": "^1.8.9",
+    "react-svg": "^16.1.7",
+    "styled-components": "^5.3.9",
+    "typescript": "5.0.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.3.1"
+  }
+}
