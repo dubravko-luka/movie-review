@@ -6,13 +6,17 @@ import { DefaultSeo } from 'next-seo';
 import { AppContextProvider } from '@/contexts'
 import Head from '@/components/Head'
 import { seoConfig } from 'next-seo.config';
+import Navigation from '@/components/Layout/Navigation';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <AppContextProvider>
       <DefaultSeo {...seoConfig} />
-      <Head />
-      <Component {...pageProps} />
+      <div className="bg-main min-h-screen min-w-screen">
+        <Head />
+        <Navigation />
+        <Component {...pageProps} />
+      </div>
     </AppContextProvider>
   )
 }
