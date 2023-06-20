@@ -3,7 +3,9 @@ import React, { memo } from "react";
 const HomeContainer: React.FC = () => {
   return (
     <>
-      Home
+      <p className="text-white">
+        Home
+      </p>
     </>
   )
 }
