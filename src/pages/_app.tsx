@@ -12,10 +12,14 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <AppContextProvider>
       <DefaultSeo {...seoConfig} />
-      <div className="bg-main min-h-screen min-w-screen">
-        <Head />
+      <Head />
+      <div className="max-w-screen overflow-hidden">
         <Navigation />
-        <Component {...pageProps} />
+        <div className="bg-main min-h-screen min-w-screen llg:pt-nav pt-1">
+          <div className="container min-h-nav pt-3">
+            <Component {...pageProps} />
+          </div>
+        </div>
       </div>
     </AppContextProvider>
   )

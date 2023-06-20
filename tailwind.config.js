@@ -28,6 +28,15 @@ module.exports = {
       flex: {
         '3': '0 0 33.33%;'
       },
+      padding: {
+        nav: '70px',
+      },
+      translate: {
+        nav: '70px'
+      },
+      minHeight: {
+        nav: 'calc(100% - 70px)'
+      },
       zIndex: {
         9: 9,
         100: 100,

@@ -9,7 +9,7 @@ const Title: React.FC<Props> = ({ title = 'Review Phim' }) => {
   return (
     <>
       <Head>
-        <title>ReviewPhim | {title ?? 'Review Phim'}</title>
+        <title>{title ? title.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()) : 'Review Phim'}</title>
       </Head>
     </>
   )

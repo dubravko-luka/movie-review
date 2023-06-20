@@ -12,5 +12,12 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: all .3s linear;
+}
+
+input:focus,
+textarea:focus {
+  outline: 0;
 }
