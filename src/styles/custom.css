@@ -1,0 +1,27 @@
+/* SWIPPER HOME */
+
+.home-slide-pagination {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-slide-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: .5;
+  margin: 5px 7px;
+}
+
+.home-slide-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 30px;
+  border-radius: 3px;
+  opacity: 1;
+}
+
+/* END SWIPPER HOME */

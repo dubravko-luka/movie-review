@@ -9,6 +9,7 @@ import { seoConfig } from 'next-seo.config';
 import Navigation from '@/components/Layout/Navigation';
 
 export default function App({ Component, pageProps }: AppProps) {
+
   return (
     <AppContextProvider>
       <DefaultSeo {...seoConfig} />
