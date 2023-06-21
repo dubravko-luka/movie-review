@@ -8,6 +8,8 @@ import Head from '@/components/Head'
 import { seoConfig } from 'next-seo.config';
 import Navigation from '@/components/Layout/Navigation';
 import WindowResizeHandler from '@/handlers/WindowResizeHandler';
+import client from '@/api/graphql/queries';
+import { ApolloProvider } from '@apollo/client';
 
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -15,12 +17,14 @@ export default function App({ Component, pageProps }: AppProps) {
     <AppContextProvider>
       <DefaultSeo {...seoConfig} />
       <WindowResizeHandler />
-      <Head />
+      {/* <Head /> */}
       <div className="max-w-screen overflow-hidden">
-        <Navigation />
+        {/* <Navigation /> */}
         <div className="bg-main min-h-screen min-w-screen llg:pt-nav pt-1">
           <div className="container min-h-nav">
-            <Component {...pageProps} />
+            <ApolloProvider client={client}>
+              <Component {...pageProps} />
+            </ApolloProvider>
           </div>
         </div>
       </div>

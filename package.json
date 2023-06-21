@@ -16,6 +16,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.16",
     "@tailwindcss/container-queries": "^0.1.1",
     "@types/aos": "^3.0.4",
     "@types/node": "18.15.11",
@@ -30,6 +31,7 @@
     "axios": "^1.4.0",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
+    "graphql": "^16.6.0",
     "next": "13.2.4",
     "next-connect": "^1.0.0",
     "next-secure-headers": "^2.2.0",

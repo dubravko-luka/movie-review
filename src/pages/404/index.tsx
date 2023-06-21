@@ -2,10 +2,20 @@ import type { PageConfig } from 'next';
 import styles from './styles.module.css'
 import Link from 'next/link';
 import { AppRoutes } from '@/utils/routes';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 export const config: PageConfig = { amp: false };
 
 const Page404: React.FC = () => {
+
+	const router = useRouter()
+
+	/* eslint-disable */
+	useEffect(() => {
+		router.push('/the-loai'); // Redirect về trang chủ
+	}, []);
+	/* eslint-enable */
 
 	return (
 		<>
