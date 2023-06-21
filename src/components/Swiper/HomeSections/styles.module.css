@@ -1,3 +1,7 @@
+.slide:hover .homeSildeImg {
+  transform: scale(1.1);
+}
+
 .homeSildeImg {
   width: 100%;
 }
@@ -21,7 +25,7 @@
   overflow: hidden;
 }
 
-.homeSlideDescription {
+.homeSlideDate {
   font-size: 13px;
   text-shadow: 0 0 10px #000;
   white-space: nowrap;
@@ -42,4 +46,24 @@
   margin: 0;
   color: #fff;
   white-space: nowrap;
+}
+
+.iconNavigation {
+  width: 50px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 0%;
+  z-index: 999;
+  opacity: 1;
+}
+
+.iconNavLeft {
+  transform: translate(-50%, -50%);
+}
+
+.iconNavRight {
+  transform: translate(50%, -50%);
 }

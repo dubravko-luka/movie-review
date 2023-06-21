@@ -25,3 +25,16 @@
 }
 
 /* END SWIPPER HOME */
+
+/* HOME SECTION SWIPER */
+
+.home-section-review-swiper.swiper-grid-column>.swiper-wrapper {
+  flex-direction: unset;
+}
+
+.home-section-review-swiper .swiper-slide {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+/* END HOME SECTION SWIPER */

@@ -70,7 +70,7 @@ const Navigation: React.FC = () => {
             <div className="col-span-1 relative">
               <div className={styles.menuRight}>
                 <div className="icons" onClick={() => setShowSearch(true)}>
-                  <Svg name="search" />
+                  <Svg path="icons" name="search" />
                 </div>
               </div>
             </div>

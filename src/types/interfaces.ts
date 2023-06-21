@@ -13,6 +13,6 @@ export interface Slide {
   image: string
   href: string
   name?: string
-  description?: string
+  date?: string
   tags: string[]
 }

@@ -1,0 +1,49 @@
+.slide:hover .homeSildeImg {
+  transform: scale(1.1);
+}
+
+.homeSildeImg {
+  width: 100%;
+}
+
+.homeSildeDescriptionGroup {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  color: #fff;
+  padding: 14px;
+  width: 100%;
+}
+
+.homeSlideName {
+  font-size: 16px;
+  font-weight: 400;
+  text-shadow: 0 0 10px #000;
+  margin-bottom: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.homeSlideDate {
+  font-size: 13px;
+  text-shadow: 0 0 10px #000;
+  white-space: nowrap;
+}
+
+.homeSlideTagGroup {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+.homeSlideTag {
+  background: #408BEA;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  margin: 0;
+  color: #fff;
+  white-space: nowrap;
+}
