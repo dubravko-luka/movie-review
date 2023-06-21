@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: 'http://3.24.152.19:8085/graphql',
+  uri: 'https://api.reshare.com.au/graphql',
   cache: new InMemoryCache(),
 });
 
