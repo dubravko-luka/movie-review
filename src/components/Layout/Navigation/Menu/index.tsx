@@ -3,7 +3,8 @@ import { MenuItem, MenuProps } from "@/types/interfaces";
 import Link from "next/link";
 import styles from './styles.module.css'
 import Svg from '@/components/Svg'
-import { getMenus } from "@/api/endpoints/menu";
+// import { getMenus } from "@/api/endpoints/menu";
+import { MENU_CONFIG } from "./temp.data";
 
 const renderMenu = (menuItems: MenuItem[], closeMenu: () => void, linkParent?: string): JSX.Element[] => {
 
@@ -53,19 +54,19 @@ const Menu: React.FC<MenuProps & { closeMenu: () => void }> = ({ menuItems, clos
 const MenuComponent: React.FC<{ closeMenu: () => void }> = ({ closeMenu }) => {
 
   // Get menu data
-  const [menuConfig, setMenuConfig] = useState([])
+  const [menuConfig, setMenuConfig] = useState([...MENU_CONFIG])
 
-  useEffect(() => {
-    const fetchData = async () => {
-      await getMenus().then((res) => {
-        if (res && res?.menu) {
-          setMenuConfig(res?.menu);
-        }
-      });
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     await getMenus().then((res) => {
+  //       if (res && res?.menu) {
+  //         setMenuConfig(res?.menu);
+  //       }
+  //     });
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
   // End get menu data
 
   return (
