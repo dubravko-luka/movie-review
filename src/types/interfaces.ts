@@ -8,3 +8,11 @@ export interface MenuItem {
 export interface MenuProps {
   menuItems: MenuItem[];
 }
+
+export interface Slide {
+  image: string
+  href: string
+  name?: string
+  description?: string
+  tags: string[]
+}

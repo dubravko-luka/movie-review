@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from './styles.module.css'
 import Svg from '@/components/Svg'
 // import { getMenus } from "@/api/endpoints/menu";
-import { MENU_CONFIG } from "./temp.data";
+import { MENU_CONFIG } from "./data.demo";
 
 const renderMenu = (menuItems: MenuItem[], closeMenu: () => void, linkParent?: string): JSX.Element[] => {
 
