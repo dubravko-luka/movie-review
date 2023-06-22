@@ -28,6 +28,7 @@
     "@types/react-svg": "^5.0.0",
     "@types/styled-components": "^5.1.26",
     "aos": "^2.3.4",
+    "apollo-link-http": "^1.5.17",
     "axios": "^1.4.0",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
