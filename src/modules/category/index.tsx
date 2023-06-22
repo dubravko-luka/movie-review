@@ -71,61 +71,67 @@ const CategoryContainer: React.FC = () => {
   const router = useRouter()
 
 
-  const [query, setQuery] = useState({})
+  const [cate, setCate] = useState(router?.query && router?.query?.category ? router?.query?.category : "")
+  const [state, setState] = useState(router?.query && router?.query?.state ? router?.query?.state : "")
+  const [limit, setLimit] = useState(16)
+
+  // const handleQuery = () => {
+  //   let query: any = {}
+  //   if (cate) {
+  //     query.cateId = cate
+  //   }
+
+  //   if (state) {
+  //     query.stateId = state
+  //   }
+
+  //   if (limit) {
+  //     query.limit = limit
+  //   }
+  //   return {
+  //     variables: query
+  //   }
+  // }
+
+  const query: any = {
+    limit: limit,
+  };
+
+  console.log('==============>', cate);
+
+  if (cate) {
+    query.cateId = [cate]
+  }
+
+  if (state) {
+    query.stateId = [state]
+  }
 
   const { loading, error, data } = useQuery(GET_PRODUCTS, {
-    variables: query,
+    variables: query
   });
 
   useEffect(() => {
-    if (router.query.category) {
-      setQuery({
-        ...query,
-        cateId: [router?.query?.category]
-      })
+    if (router.query && router.query.category) {
+      setCate(router?.query?.category)
     } else {
-      const updatedQuery: any = { ...query };
-
-      if (updatedQuery?.cateId) {
-        delete updatedQuery?.cateId;
-      }
-
-      setQuery({
-        ...updatedQuery
-      });
+      setCate("")
     }
   }, [router.query?.category])
 
   useEffect(() => {
     if (router.query.state) {
-      setQuery({
-        ...query,
-        stateId: [router?.query?.state]
-      })
+      setState(router?.query?.state)
     } else {
-      const updatedQuery: any = { ...query };
-
-      if (updatedQuery?.stateId) {
-        delete updatedQuery?.stateId;
-      }
-
-      setQuery({
-        ...updatedQuery
-      });
+      setState("")
     }
   }, [router.query?.state])
 
   useEffect(() => {
     if (router.query.limit) {
-      setQuery({
-        ...query,
-        limit: Number(router?.query?.limit)
-      })
+      setLimit(Number(router?.query?.limit))
     } else {
-      setQuery({
-        ...query,
-        limit: 16
-      })
+      setLimit(16)
     }
   }, [router.query?.limit])
 
