@@ -7,13 +7,14 @@ const CategoryContainer: React.FC = () => {
   const GET_PRODUCTS = gql`
     query GetProducts(
       $cateId: [ID!],
-      $stateId: [ID!]
+      $stateId: [ID!],
+      $limit: Int!
     ) {
       getListProducts(
         cate_id: $cateId,
         state: $stateId
         offset: 0,
-        limit: 16
+        limit: $limit,
       ) {
         total,
         items {
@@ -114,6 +115,20 @@ const CategoryContainer: React.FC = () => {
     }
   }, [router.query?.state])
 
+  useEffect(() => {
+    if (router.query.limit) {
+      setQuery({
+        ...query,
+        limit: Number(router?.query?.limit)
+      })
+    } else {
+      setQuery({
+        ...query,
+        limit: 16
+      })
+    }
+  }, [router.query?.limit])
+
   const handleCategoryQuery = async (e: any) => {
     const as: any = undefined;
     router.replace(
@@ -137,6 +152,21 @@ const CategoryContainer: React.FC = () => {
         query: {
           ...router.query,
           state: e.target.value,
+        },
+      },
+      as,
+      { shallow: true },
+    );
+  };
+
+  const handleLimitQuery = async (e: any) => {
+    const as: any = undefined;
+    router.replace(
+      {
+        pathname: '/the-loai',
+        query: {
+          ...router.query,
+          limit: e.target.value,
         },
       },
       as,
@@ -175,6 +205,12 @@ const CategoryContainer: React.FC = () => {
             <option value="6407fbd9134683002052da9d">Tasmania</option>
           </select>
 
+          <select className="text-black" value={router?.query?.limit} onChange={handleLimitQuery}>
+            <option value="16">16</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+          </select>
+
         </div>
 
 
@@ -188,7 +224,7 @@ const CategoryContainer: React.FC = () => {
                 : <ul>
                   {data?.getListProducts?.items?.map((product: any, index: number) => (
                     <li key={index} className={`border-b-2 py-3 border-white flex items-center gap-10`}>
-                      <p>{index}&nbsp;</p>
+                      <p>{index + 1}&nbsp;</p>
                       <img src={product?.feature_image} width={100} alt="" />
                       <p>{product.title} - ${product.price.value}</p>
                     </li>
