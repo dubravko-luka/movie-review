@@ -75,24 +75,6 @@ const CategoryContainer: React.FC = () => {
   const [state, setState] = useState(router?.query && router?.query?.state ? router?.query?.state : "")
   const [limit, setLimit] = useState(16)
 
-  // const handleQuery = () => {
-  //   let query: any = {}
-  //   if (cate) {
-  //     query.cateId = cate
-  //   }
-
-  //   if (state) {
-  //     query.stateId = state
-  //   }
-
-  //   if (limit) {
-  //     query.limit = limit
-  //   }
-  //   return {
-  //     variables: query
-  //   }
-  // }
-
   const query: any = {
     limit: limit,
   };

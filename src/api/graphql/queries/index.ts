@@ -6,30 +6,28 @@
 //   credentials: 'same-origin',
 // });
 
-// const client = new ApolloClient({
+// export const client = new ApolloClient({
 //   link: proxyLink,
 //   cache: new InMemoryCache(),
 // });
 
-// export default client;
 
 
-
-import { ApolloClient, InMemoryCache } from '@apollo/client';
-import possibleTypes from './possibleTypes.json';
+import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
+// import possibleTypes from './possibleTypes.json';
 import { BatchHttpLink } from '@apollo/client/link/batch-http';
 
-const httpLink = new BatchHttpLink({
-  uri: 'http://app.reshare.com.au:8085/graphql',
+const httpLink = new HttpLink({
+  uri: process.env.NEXT_PUBLIC_API_URL,
   credentials: process.env.NODE_ENV === 'development' ? 'include' : 'same-origin',
   includeExtensions: true,
-  batchMax: 5,
+  // batchMax: 5,
 });
 
 // setup your client
 export const client = new ApolloClient({
   link: httpLink,
-  cache: new InMemoryCache({ possibleTypes: possibleTypes.possibleTypes }),
+  cache: new InMemoryCache(),
   name: 'onda-dashboard',
   version: '1.0',
   queryDeduplication: false,
@@ -42,11 +40,12 @@ export const client = new ApolloClient({
 
 
 
+
 // import { ClientOptions, createClient } from 'urql';
 // import { BatchHttpLink } from '@apollo/client/link/batch-http';
 // import { ApolloClient, InMemoryCache } from '@apollo/client';
 
-// export const client = createClient({
+// export const clientApollo = createClient({
 //   url: 'http://app.reshare.com.au:8085/graphql',
 //   maskTypename: true,
 //   requestPolicy: 'network-only',
@@ -63,7 +62,7 @@ export const client = new ApolloClient({
 //   includeExtensions: true,
 //   batchMax: 5,
 // });
-// export const apolloClient = new ApolloClient({
+// export const client = new ApolloClient({
 //   ssrMode: typeof window === 'undefined', // set to true for SSR
 //   link: httpLink,
 //   cache: new InMemoryCache(),
