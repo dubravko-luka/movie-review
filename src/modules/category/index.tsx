@@ -165,8 +165,8 @@ const CategoryContainer: React.FC = () => {
   return (
     <>
       <div className="text-white">
-        <div className="mb-8 flex gap-6">
-          <select className="text-black" value={router?.query?.category} onChange={handleCategoryQuery}>
+        <div className="mb-8 grid gap-6">
+          <select className="text-black col-span-12" value={router?.query?.category} onChange={handleCategoryQuery}>
             <option value="">---All---</option>
             <option value="60599df530dddf002f38f07f">appliances</option>
             <option value="60599e1830dddf002f38f080">baby & maternity</option>
@@ -181,7 +181,7 @@ const CategoryContainer: React.FC = () => {
             <option value="60599f5430dddf002f38f08a">tools & hardware</option>
           </select>
 
-          <select className="text-black" value={router?.query?.state} onChange={handleStateQuery}>
+          <select className="text-black col-span-12" value={router?.query?.state} onChange={handleStateQuery}>
             <option value="">---All---</option>
             <option value="63c8fc8b0a7420002051dd66">Victoria</option>
             <option value="63c8fcc00a7420002051dd6e">New South Wales</option>
@@ -193,7 +193,7 @@ const CategoryContainer: React.FC = () => {
             <option value="6407fbd9134683002052da9d">Tasmania</option>
           </select>
 
-          <select className="text-black" value={router?.query?.limit} onChange={handleLimitQuery}>
+          <select className="text-black col-span-12" value={router?.query?.limit} onChange={handleLimitQuery}>
             <option value="16">16</option>
             <option value="25">25</option>
             <option value="50">50</option>
