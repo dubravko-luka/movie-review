@@ -97,7 +97,7 @@ const CategoryContainer: React.FC = () => {
     limit: limit,
   };
 
-  console.log('==============>', cate);
+  console.log('==============>', 'loading version');
 
   if (cate) {
     query.cateId = [cate]

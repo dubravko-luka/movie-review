@@ -8,7 +8,7 @@ import Head from '@/components/Head'
 import { seoConfig } from 'next-seo.config';
 import Navigation from '@/components/Layout/Navigation';
 import WindowResizeHandler from '@/handlers/WindowResizeHandler';
-import client from '@/api/graphql/queries';
+import { client } from '@/api/graphql/queries';
 import { ApolloProvider } from '@apollo/client';
 
 export default function App({ Component, pageProps }: AppProps) {
