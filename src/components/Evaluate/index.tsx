@@ -13,6 +13,9 @@ const EvaluateMain: React.FC = () => {
           <div className={styles.name}>Nhục Bồ Đoàn 3: Đại Nội Mật Thám</div>
           <p className={styles.date}>1996</p>
         </div>
+        <div className={styles.playButton}>
+          <img src="/images/icons/play.svg" className="w-12" alt={alt} />
+        </div>
       </div>
     </Link>
   )
@@ -24,11 +27,14 @@ const EvaluateItem: React.FC = () => {
       <Link href={'/'}>
         <div className={styles.itemMain}>
           <div className={styles.itemImageWrap}>
-            <img className={styles.itemImage} src="https://phimmoiyyy.net/wp-content/uploads/2023/06/khu-vuon-doi-tra.jpg" alt={alt} />
+            <img className={styles.itemImage} src="https://wegotthiscovered.com/wp-content/uploads/2022/04/One-Piece.jpeg" alt={alt} />
+            <div className={styles.playButton}>
+              <img src="/images/icons/play.svg" className="w-12" alt={alt} />
+            </div>
           </div>
           <div className={`${styles.itemInfo}`}>
-            <p className={styles.name}>Khu Vườn Dối Trá</p>
-            <div className={`${styles.pointWrap} py-2 flex items-center justify-start gap-1`}>
+            <p className={styles.name}>HOT | Người Tình Đầu Tiên Của Luffy Là Đây | One Piece</p>
+            <div className={`${styles.pointWrap} py-1 flex items-center justify-start gap-1`}>
               <div className={`${styles.points} flex gap-1 items-center justify-center`}>
                 <div className={styles.star}>
                   <Svg path="icons" name="star" />
@@ -56,7 +62,7 @@ const Evaluate: React.FC = () => {
       <div className="grid grid-cols-12 gap-3">
         {
           new Array(9).fill(null).map((item, index) => (
-            <div key={index} className="llg:col-span-12 sm:col-span-6 col-span-12">
+            <div key={index} className="llg:col-span-12 sm:col-span-6 col-span-12 border-b border-bd-255 pb-3 last:pb-0 last:border-b-0 first:border-t first:pt-3">
               <EvaluateItem />
             </div>
           ))

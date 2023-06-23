@@ -25,6 +25,25 @@
   color: #fff;
 }
 
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .65s ease-in-out;
+}
+
+.itemMain:hover .playButton {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(.75);
+}
+
+.itemMain:hover .itemImage {
+  transform: scale(1.1);
+  filter: blur(2px) brightness(.3);
+}
+
 .itemImageWrap {
   width: 160px;
   height: 90px;

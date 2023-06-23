@@ -10,6 +10,9 @@ const RecommendItem: React.FC = () => {
         <div className={styles.itemMain}>
           <div className={styles.itemImageWrap}>
             <img className={styles.itemImage} src="https://minhtuanmobile.com/uploads/blog/kimetsu-no-yaiba-ss3-cong-bo-thoi-gian-phat-song-tap-cuoi-230613013901.jpg" alt={alt} />
+            <div className={styles.playButton}>
+              <img src="/images/icons/play.svg" className="w-12" alt={alt} />
+            </div>
           </div>
           <div className={`${styles.itemInfo}`}>
             <p className={styles.name}>Demon Slayer: Kimetsu no Yaiba Swordsmith Village Arc (Lồng Tiếng Việt)</p>
