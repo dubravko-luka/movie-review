@@ -5,7 +5,7 @@ import styles from './styles.module.css'
 
 const Footer: React.FC = () => {
   return (
-    <footer className='bg-main px-7 py-10'>
+    <footer className='bg-main px-7 pt-10 pb-36'>
       <div className={`sectionTop grid grid-cols-12 ssm:gap-7 gap-1`}>
         <div className="footer-section md:col-span-4 col-span-12 max-w-sm md:text-left text-center m-auto">
           <div>
