@@ -1,15 +1,15 @@
 import React, { memo, useEffect, useState } from "react"
 import styles from './styles.module.css'
 import Menu from "./Menu"
-import { Drawer } from 'antd';
 import { alt } from "@/helpers/common"
 import Svg from "@/components/Svg"
 import { AppRoutes } from "@/utils/routes"
 import Link from "next/link"
-import { useAppState } from "@/contexts";
 import { Helmet } from "react-helmet";
 
 const Navigation: React.FC = () => {
+
+  console.log('==============>', 'richard');
 
   const [openMenu, setOpenMenu] = useState(false)
   const [showSearch, setShowSearch] = useState(false)
