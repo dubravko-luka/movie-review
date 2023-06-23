@@ -48,6 +48,9 @@ const Evaluate: React.FC = () => {
   return (
     <>
       <div className="main mb-5">
+        <div className={`${styles.title} text-white py-3 mb-3 border-b border-bd-255`}>
+          <p>Đánh giá</p>
+        </div>
         <EvaluateMain />
       </div>
       <div className="grid grid-cols-12 gap-3">

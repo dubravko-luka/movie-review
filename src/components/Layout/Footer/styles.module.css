@@ -1,0 +1,11 @@
+.logo {
+  max-width: 200px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.textFooter,
+.textFooter * {
+  font-size: 13px;
+  line-height: 20px;
+}

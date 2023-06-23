@@ -6,7 +6,7 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      <Title title="Trang chủ" />
+      <Title title="Review Phim | Trang Chủ" />
       <HomeContainer />
     </>
   )

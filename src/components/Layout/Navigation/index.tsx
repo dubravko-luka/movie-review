@@ -36,7 +36,7 @@ const Navigation: React.FC = () => {
   return (
     <header className={`${styles.navigation} ${isHidden ? styles.hidden : ''} flex justify-center`}>
       <div className={styles.wrapper}>
-        <div className={`${styles.wrapMenu} container w-full`}>
+        <div className={`${styles.wrapMenu} w-full`}>
           <div className="w-full grid grid-cols-12 items-center justify-between gap-x-5">
             {/* ICON MOBILE */}
             <div className="llg:hidden col-span-1 relative">
@@ -79,7 +79,7 @@ const Navigation: React.FC = () => {
       </div>
       {/* FORM SEARC */}
       <div className={`${styles.formSearch} w-full ${showSearch ? styles.show : ''}`}>
-        <div className={`grid grid-cols-12 w-full h-full items-center justify-center container`}>
+        <div className={`grid grid-cols-12 w-full h-full items-center justify-center`}>
           <div className="icons col-span-1 flex items-center justify-center" onClick={() => setShowSearch(false)}>
             <Svg name="arrow-left" />
           </div>

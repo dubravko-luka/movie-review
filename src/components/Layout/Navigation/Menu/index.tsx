@@ -54,7 +54,7 @@ const Menu: React.FC<MenuProps & { closeMenu: () => void }> = ({ menuItems, clos
 const MenuComponent: React.FC<{ closeMenu: () => void }> = ({ closeMenu }) => {
 
   // Get menu data
-  const [menuConfig, setMenuConfig] = useState([...MENU_CONFIG])
+  const [menuConfig] = useState([...MENU_CONFIG])
 
   // useEffect(() => {
   //   const fetchData = async () => {

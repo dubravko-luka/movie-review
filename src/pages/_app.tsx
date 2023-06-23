@@ -8,6 +8,7 @@ import Head from '@/components/Head'
 import { seoConfig } from 'next-seo.config';
 import Navigation from '@/components/Layout/Navigation';
 import WindowResizeHandler from '@/handlers/WindowResizeHandler';
+import Footer from '@/components/Layout/Footer';
 
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -19,10 +20,11 @@ export default function App({ Component, pageProps }: AppProps) {
       <div className="max-w-screen overflow-hidden">
         <Navigation />
         <div className="bg-main min-h-screen min-w-screen llg:pt-nav pt-1">
-          <div className="container min-h-nav">
+          <div className="min-h-nav">
             <Component {...pageProps} />
           </div>
         </div>
+        <Footer />
       </div>
     </AppContextProvider>
   )

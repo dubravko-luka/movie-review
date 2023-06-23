@@ -1,6 +1,6 @@
-import { memo } from 'react';
+import { memo, useEffect, useState } from 'react';
 
-import { Pagination, Navigation } from "swiper";
+import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/navigation";
@@ -34,48 +34,79 @@ const TemplateSlide: React.FC<Props> = ({ data }) => {
               ))
             }
           </div>
+          <div className={styles.playButton}>
+            <img src="/images/icons/play.svg" className="w-12" alt={alt} />
+          </div>
         </div>
       </Link>
     </>
   )
 }
 
-const SwiperHome = () => {
+const SwiperHome: React.FC<{ id?: string }> = ({ id }) => {
+
+  const [array, setArray] = useState<Slide[]>([])
+
+  function shuffleArray(array: Slide[]) {
+    for (var i = array.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+    return array ?? [];
+  }
+
+  useEffect(() => {
+    setArray([...shuffleArray(SLIDE_DEMO)])
+  }, [])
 
   return (
     <div className='w-full relative'>
       <Swiper
         spaceBetween={16}
         slidesPerView={2}
-        slidesPerGroup={4}
+        slidesPerGroup={2}
         breakpoints={{
+          480: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+          },
           1024: {
             slidesPerView: 4,
             slidesPerGroup: 4,
+          },
+          1280: {
+            slidesPerView: 5,
+            slidesPerGroup: 5,
+          },
+          1440: {
+            slidesPerView: 6,
+            slidesPerGroup: 6,
           }
         }}
         navigation={{
           enabled: true,
-          nextEl: '.review-section-home-swiper-button-next',
-          prevEl: '.review-section-home-swiper-button-prev',
+          nextEl: `.${id}-review-section-home-swiper-button-next`,
+          prevEl: `.${id}-review-section-home-swiper-button-prev`,
         }}
         loop={true}
-        pagination={{ el: '.home-slide-pagination', clickable: true }}
-        modules={[Pagination, Navigation]}
+        pagination={false}
+        modules={[Navigation]}
         className="home-section-review-swiper"
       >
         {
-          SLIDE_DEMO.map((item, index) => (
+          array.map((item, index) => (
             <SwiperSlide key={index}>
               <TemplateSlide data={item} />
             </SwiperSlide>
           ))
         }
       </Swiper>
-      <div className={`${styles.iconNavigation} ${styles.iconNavLeft} top-2/4 left-0 review-section-home-swiper-button-prev absolute`}>
+      <div className={`${styles.iconNavigation} ${styles.iconNavLeft} top-2/4 left-0 ${id}-review-section-home-swiper-button-prev absolute`}>
         <Svg path='icons' name='chevron-left' />
       </div>
-      <div className={`${styles.iconNavigation} ${styles.iconNavRight} top-2/4 right-0 -translate-x-2/4 review-section-home-swiper-button-next absolute`}>
+      <div className={`${styles.iconNavigation} ${styles.iconNavRight} top-2/4 right-0 -translate-x-2/4 ${id}-review-section-home-swiper-button-next absolute`}>
         <Svg path='icons' name='chevron-right' />
       </div>
     </div >

@@ -1,5 +1,20 @@
 /* MAIN */
 
+.title {
+  position: relative;
+}
+
+.title:before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 30px;
+  height: 4px;
+  border-radius: 10px;
+  background: #408BEA;
+}
+
 .main {
   width: 100%;
   padding-top: 40%;
