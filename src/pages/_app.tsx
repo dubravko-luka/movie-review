@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head />
       <div className="max-w-screen overflow-hidden">
         <Navigation />
-        <div className="bg-main min-h-screen min-w-screen llg:pt-nav pt-1">
+        <div className={`bg-main min-h-screen min-w-screen llg:pt-nav pt-1`}>
           <div className="min-h-nav">
             <Component {...pageProps} />
           </div>
