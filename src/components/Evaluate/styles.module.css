@@ -59,7 +59,6 @@
 /* ITEM */
 .itemMain {
   width: 100%;
-  height: 90px;
   float: left;
   position: relative;
   display: flex;
@@ -161,4 +160,27 @@
 .point {
   font-size: 13px;
   fill: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 991px) {
+  .itemMain {
+    display: block;
+  }
+
+  .itemImageWrap {
+    width: 100%;
+    height: 170px;
+  }
+
+  .itemInfo {
+    position: relative;
+    padding: 10px 0px;
+  }
+}
+
+@media (max-width: 479px) {
+  .itemImageWrap {
+    width: 100%;
+    height: 200px;
+  }
 }

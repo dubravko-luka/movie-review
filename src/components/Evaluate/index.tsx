@@ -59,10 +59,10 @@ const Evaluate: React.FC = () => {
         </div>
         <EvaluateMain />
       </div>
-      <div className="grid grid-cols-12 gap-3">
+      <div className="grid grid-cols-12 gap-3 llg:gap-y-3 gap-y-6">
         {
           new Array(9).fill(null).map((item, index) => (
-            <div key={index} className="llg:col-span-12 sm:col-span-6 col-span-12 border-b border-bd-255 pb-3 last:pb-0 last:border-b-0 first:border-t first:pt-3">
+            <div key={index} className="llg:col-span-12 sm:col-span-4 ssm:col-span-6 col-span-12">
               <EvaluateItem />
             </div>
           ))
