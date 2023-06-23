@@ -1,9 +1,8 @@
-import React, { memo, useEffect, useState } from "react"
+import React, { memo, useState } from "react"
 import { MenuItem, MenuProps } from "@/types/interfaces";
 import Link from "next/link";
 import styles from './styles.module.css'
 import Svg from '@/components/Svg'
-// import { getMenus } from "@/api/endpoints/menu";
 import { MENU_CONFIG } from "./data.demo";
 
 const renderMenu = (menuItems: MenuItem[], closeMenu: () => void, linkParent?: string): JSX.Element[] => {
@@ -55,19 +54,6 @@ const MenuComponent: React.FC<{ closeMenu: () => void }> = ({ closeMenu }) => {
 
   // Get menu data
   const [menuConfig] = useState([...MENU_CONFIG])
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     await getMenus().then((res) => {
-  //       if (res && res?.menu) {
-  //         setMenuConfig(res?.menu);
-  //       }
-  //     });
-  //   };
-
-  //   fetchData();
-  // }, []);
-  // End get menu data
 
   return (
     <>

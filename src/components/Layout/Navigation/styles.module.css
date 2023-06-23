@@ -76,7 +76,14 @@
   .navigation {
     background: rgba(15, 15, 15, 1);
     position: relative;
+    opacity: 1;
     /* overflow: hidden; */
+  }
+
+  .navigation.hidden {
+    background: rgba(15, 15, 15, 1);
+    position: relative;
+    opacity: 1;
   }
 
   .openMenu {
