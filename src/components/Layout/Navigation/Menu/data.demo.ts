@@ -5,7 +5,7 @@ export const MENU_CONFIG: MenuItem[] = [
     "childs": [],
     "nameVi": "Trang chủ",
     "nameEn": "Home",
-    "href": "/"
+    "href": ""
   },
   {
     "childs": [],

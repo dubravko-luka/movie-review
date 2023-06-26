@@ -2,6 +2,7 @@ import { ReactNode, createContext, useContext, useState } from "react";
 
 type AppState = {
 	widthClient?: number;
+	drive?: any;
 };
 
 type AppStateContextType = {
@@ -11,6 +12,7 @@ type AppStateContextType = {
 
 const defaultValues: AppState = {
 	widthClient: 0,
+	drive: null
 };
 
 const AppStateContext = createContext<AppStateContextType | undefined>(undefined);

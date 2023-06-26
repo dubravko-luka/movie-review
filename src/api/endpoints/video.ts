@@ -1,7 +1,7 @@
 import apiClient from '../services/apiClient';
 
-export const getMenus = async () => {
-  const response = await apiClient.request('GET', '/config/menu');
+export const getVideoId = async (id: string) => {
+  const response = await apiClient.request('GET', `/video/${id}`);
   if (response.status === 200) {
     const res = response.data ?? [];
     return res

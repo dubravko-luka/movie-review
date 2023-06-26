@@ -9,8 +9,6 @@ import { Helmet } from "react-helmet";
 
 const Navigation: React.FC = () => {
 
-  console.log('==============>', 'richard');
-
   const [openMenu, setOpenMenu] = useState(false)
   const [showSearch, setShowSearch] = useState(false)
 

@@ -16,3 +16,10 @@ export interface Slide {
   date?: string
   tags: string[]
 }
+
+export interface IGoogleDriveConfig {
+  clientId: string
+  clientSecret: string
+  redirectUrl: string
+  refreshToken: string
+}
