@@ -9,7 +9,6 @@ import { seoConfig } from 'next-seo.config';
 import Navigation from '@/components/Layout/Navigation';
 import WindowResizeHandler from '@/handlers/WindowResizeHandler';
 import Footer from '@/components/Layout/Footer';
-// import GoogleDrive from '@/components/GoogleDrive';
 
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -17,7 +16,6 @@ export default function App({ Component, pageProps }: AppProps) {
     <AppContextProvider>
       <DefaultSeo {...seoConfig} />
       <WindowResizeHandler />
-      {/* <GoogleDrive /> */}
       <Head />
       <div className="max-w-screen overflow-hidden">
         <Navigation />
