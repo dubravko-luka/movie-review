@@ -72,15 +72,20 @@
   position: absolute;
   padding-top: 17px;
   left: 0;
-  visibility: hidden;
-  top: 50px;
+  top: calc(100% - 2px);
+  height: 0;
   opacity: 0;
+  z-index: -1;
+  overflow: hidden;
 }
 
 .dropdown:hover .wrapDropdownItem {
-  visibility: visible;
   top: calc(100% - 2px);
+  height: unset;
+  overflow: hidden;
   opacity: 1;
+  z-index: 1;
+  transition: all 0s linear;
 }
 
 .dropdownItem .items {

@@ -1,26 +1,26 @@
 export const SECTION = [
   {
     name: 'PHIM HOT',
-    href: 'phim-hot'
+    href: 'the-loai/phim-hot'
   },
   {
     name: "PHIM CHIẾU RẠP",
-    href: 'phim-chieu-rap'
+    href: 'the-loai/phim-chieu-rap'
   },
   {
     name: "PHIM BỘ",
-    href: 'phim-bo'
+    href: 'the-loai/phim-bo'
   },
   {
     name: "PHIM LẺ",
-    href: 'phim-le'
+    href: 'the-loai/phim-le'
   },
   {
     name: "PHIM HOẠT HÌNH",
-    href: 'phim-hoat-hinh'
+    href: 'the-loai/phim-hoat-hinh'
   },
   {
     name: "TRUYỆN TRANH",
-    href: 'truyen-tranh'
+    href: 'the-loai/truyen-tranh'
   },
 ]

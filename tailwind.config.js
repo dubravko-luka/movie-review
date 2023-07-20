@@ -22,6 +22,10 @@ module.exports = {
       xxxl: '1600px',
     },
     extend: {
+      fontSize: {
+        11: '11px',
+        13: '13px'
+      },
       colors: {
         main: 'rgba(15,15,15,.9)',
         bd: {

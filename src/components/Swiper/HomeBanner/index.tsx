@@ -18,7 +18,7 @@ interface Props {
 const TemplateSlide: React.FC<Props> = ({ data }) => {
   return (
     <>
-      <Link href={data?.href ?? ''}>
+      <Link href={`/${data?.category}/${data?.href}` ?? ''}>
         <div className={`${styles.slide} relative overflow-hidden`}>
           <img className={`${styles.homeSildeImg} hover:scale-110`} src={data?.image ?? ''} alt={alt} />
           <div className={styles.homeSildeDescriptionGroup}>

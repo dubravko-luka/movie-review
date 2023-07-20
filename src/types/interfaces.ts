@@ -12,6 +12,7 @@ export interface MenuProps {
 export interface Slide {
   image: string
   href: string
+  category: string
   name?: string
   date?: string
   tags: string[]

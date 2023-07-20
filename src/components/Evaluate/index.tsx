@@ -6,7 +6,7 @@ import Svg from "../Svg"
 
 const EvaluateMain: React.FC = () => {
   return (
-    <Link href={'/'}>
+    <Link href={`/phim-le/chau-tinh-tri`}>
       <div className={`${styles.main} relative`}>
         <img className={styles.imgMain} src="https://image.tmdb.org/t/p/w500/n2b9fTgkRosM0UrAdD7UkkHz5Ky.jpg" alt={alt} />
         <div className={styles.info}>
@@ -24,7 +24,7 @@ const EvaluateMain: React.FC = () => {
 const EvaluateItem: React.FC = () => {
   return (
     <>
-      <Link href={'/'}>
+      <Link href={`/phim-le/chau-tinh-tri`}>
         <div className={styles.itemMain}>
           <div className={styles.itemImageWrap}>
             <img className={styles.itemImage} src="https://wegotthiscovered.com/wp-content/uploads/2022/04/One-Piece.jpeg" alt={alt} />

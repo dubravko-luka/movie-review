@@ -1,0 +1,45 @@
+.wrapper {
+  color: #fff;
+}
+
+.reportError {
+  border: solid 1px rgb(255 255 255 / 14%);
+  background: #000;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: #408BEA;
+}
+
+.report,
+.detailBasic,
+.description,
+.share {
+  border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.poster {
+  min-width: 140px;
+  max-width: 140px;
+}
+
+.posterImg {
+  min-width: 100%;
+}
+
+.rating {
+  border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+.point {
+  padding: 10px;
+  display: flex;
+  font-size: 27px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, .08);
+}
+
+.countRating {
+  color: #9297a2;
+}

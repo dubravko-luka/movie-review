@@ -1,7 +1,7 @@
 import Evaluate from "@/components/Evaluate";
 import SwipperHome from "@/components/Swiper/HomeBanner";
 import React, { memo } from "react";
-import Sections from "./sections";
+import Sections from "../../components/sections";
 import QandA from "@/components/QandA";
 import Recommend from "@/components/Recommend";
 
