@@ -77,7 +77,7 @@ const SearchContainer: React.FC = () => {
             <div className="grid grid-cols-12 gap-5 mt-5">
               {
                 new Array(10).fill(null)?.map((_, index) => (
-                  <div className='col-span-12 border-b border-white border-opacity-50 pb-5'>
+                  <div className='col-span-12 border-b border-white border-opacity-50 pb-5' key={index}>
                     <Link href={`/phim-le/chau-tinh-tri`}>
                       <div className={styles.itemMain}>
                         <div className={styles.itemImageWrap}>
