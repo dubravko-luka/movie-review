@@ -1,18 +1,16 @@
-import { AppRoutes } from '@/utils/routes';
+import Title from '@/components/Head/title';
 import { useRouter } from 'next/router';
-import React, { memo, useEffect } from 'react';
+import React, { memo } from 'react';
+import CategoryContainer from '@/modules/category'
 
 const Category: React.FC = () => {
 
-  const router = useRouter()
-
-  useEffect(() => {
-    router.push(AppRoutes?.home)
-  }, [])
+  const query = useRouter().query;
 
   return (
     <>
-      {/*  */}
+      <Title title={`Review Phim | ${query.category}`} />
+      <CategoryContainer />
     </>
   )
 }

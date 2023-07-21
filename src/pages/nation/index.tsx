@@ -1,13 +1,18 @@
-import React, { memo } from "react";
-import NationContainer from "@/modules/nation";
-import Title from "@/components/Head/title";
+import { AppRoutes } from "@/utils/routes";
+import { useRouter } from "next/router";
+import React, { memo, useEffect } from "react";
 
 const NationPage: React.FC = () => {
 
+  const router = useRouter()
+
+  useEffect(() => {
+    router.push(AppRoutes?.home)
+  }, [])
+
   return (
     <>
-      <Title title="Quốc Gia" />
-      <NationContainer />
+      <></>
     </>
   )
 }

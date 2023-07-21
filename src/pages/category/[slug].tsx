@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import CategoryContainer from "@/modules/category/list";
+import CategoryContainer from "@/modules/category/slug";
 import Title from "@/components/Head/title";
 import { useRouter } from 'next/router';
 

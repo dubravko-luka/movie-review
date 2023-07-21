@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import NationContainer from "@/modules/nation/list";
+import NationContainer from "@/modules/nation";
 import Title from "@/components/Head/title";
 import { useRouter } from 'next/router';
 

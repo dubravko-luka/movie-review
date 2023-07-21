@@ -146,6 +146,9 @@
     width: 210px;
     opacity: 1;
     overflow-y: hidden;
+    height: unset;
+    opacity: 1;
+    z-index: 1;
   }
 
   .dropdown.hover .hg-custom {

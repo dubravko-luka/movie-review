@@ -18,5 +18,9 @@ module.exports = {
 			source: '/quoc-gia/:slug',
 			destination: '/nation/:slug',
 		},
+		{
+			source: '/tim-kiem',
+			destination: '/search',
+		},
 	],
 };

@@ -1,3 +1,4 @@
 export const AppRoutes = {
-  home: "/"
+  home: "/",
+  search: '/tim-kiem'
 }
